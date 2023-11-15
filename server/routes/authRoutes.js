@@ -14,7 +14,7 @@ router.use(
 // Define a route for the root endpoint, test is in authController.js
 router.get('/', test);
 
-router.post('register', registerUser)
+router.post('/register', registerUser)
 
 // Export the router for use in other files
 module.exports = router;

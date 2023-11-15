@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Navbar />
-      //Display a toaster pop-up notification
+      {/* Display a toaster pop-up notification */}
       <Toaster position='bottom-right' toastOptions={{duration: 2000}}/>
       <Routes>
         <Route path='/' element={<Home/>}/>
