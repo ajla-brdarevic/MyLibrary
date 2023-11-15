@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const cors = require('cors');
-const {test, registerUser} = require('../controllers/authController')
+const {test, registerUser, loginUser} = require('../controllers/authController')
 
 // Middleware to handle Cross-Origin Resource Sharing (CORS)
 router.use(
@@ -15,6 +15,8 @@ router.use(
 router.get('/', test);
 
 router.post('/register', registerUser)
+
+router.post('/login', loginUser)
 
 // Export the router for use in other files
 module.exports = router;
