@@ -45,15 +45,15 @@ const registerUser = async (req, res) => {
     } catch (error) {
         console.log(error)
     }
-}
+};
 
 //Login endpoint
 const loginUser = async (req, res) => {
     try{
-        const {email, password} = req.body
+        const {email, password} = req.body;
 
         //Check if user exists
-        const user = await User.findOne({email})
+        const user = await User.findOne({email});
         if(!user){
             return res.json({
                 error: 'No user found'
