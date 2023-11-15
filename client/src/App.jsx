@@ -4,6 +4,11 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Register from './pages/Register'
 import Login from './pages/Login'
+import axios from 'axios'
+
+// Axios is configured here to use 'http://localhost:8000' as the default base URL for all requests
+axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.withCredentials = true
 
 function App() {
   return (
