@@ -65,6 +65,11 @@ const loginUser = async (req, res) => {
         if(match) {
             //JSON Web Token
             res.json('passwords match')
+        } 
+        if(!match){
+            res.json({
+                error: 'Passwords do not match'
+            })
         }
     }catch (error){
         console.log(error)
